@@ -43,14 +43,15 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   if (!ready) return <div className="grid min-h-screen place-items-center text-sm text-muted">{tCommon("loading")}</div>;
 
   return <div className="min-h-screen lg:flex">
-    <aside className="hidden w-64 shrink-0 border-r border-border bg-panel p-5 lg:block">
-      <Link className="block px-3 py-4 text-xl font-bold text-primary" href="/admin">{tCommon("brand")}</Link>
-      <nav className="mt-4 space-y-1" aria-label={tCommon("panel")}>
+    <aside className="hidden w-72 shrink-0 border-r border-border bg-panel p-5 lg:block">
+      <Link className="flex items-center gap-3 border-b border-border px-3 py-5 text-lg font-bold text-foreground" href="/admin"><span className="grid size-9 place-items-center rounded-md bg-primary text-xs font-black text-white">FU</span><span>{tCommon("brand")}</span></Link>
+      <p className="px-3 pt-7 text-[10px] font-bold uppercase tracking-[.2em] text-muted">FondUz</p>
+      <nav className="mt-3 space-y-1" aria-label={tCommon("panel")}>
         {navigation.map((item) => <Link key={item.href} href={item.href} className={`nav-link ${pathname === item.href ? "nav-link-active" : ""}`}>{tNav(item.key)}</Link>)}
       </nav>
     </aside>
     <div className="min-w-0 flex-1">
-      <header className="sticky top-0 z-20 flex min-h-16 flex-wrap items-center justify-between gap-3 border-b border-border bg-panel/95 px-4 py-3 backdrop-blur sm:px-7">
+      <header className="sticky top-0 z-20 flex min-h-16 flex-wrap items-center justify-between gap-3 border-b border-border bg-panel px-4 py-3 sm:px-7">
         <button className="rounded-lg border border-border px-3 py-2 text-sm lg:hidden" onClick={() => setMenu((value) => !value)} aria-expanded={menu} aria-controls="mobile-admin-navigation">{tCommon("menu")}</button>
         <span className="hidden text-sm font-semibold sm:block">{tCommon("panel")}</span>
         <div className="ml-auto flex flex-wrap items-center gap-2"><AppearanceControls /><button onClick={() => void logout()} className="rounded-lg border border-border px-3 py-2 text-sm">{tCommon("logout")}</button></div>

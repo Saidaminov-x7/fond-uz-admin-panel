@@ -12,22 +12,22 @@
 
 :root {
   color-scheme: light;
-  --background: #f3f7f5;
-  --foreground: #132821;
-  --panel: #ffffff;
-  --primary: #12694f;
-  --border: #d9e5df;
-  --muted: #64756e;
-  --subtle: #f7faf8;
+  --background: #f2f1eb;
+  --foreground: #18251f;
+  --panel: #fffefb;
+  --primary: #176b50;
+  --border: #d5dbd1;
+  --muted: #617167;
+  --subtle: #e8ebe4;
 }
 
 :root.dark {
   color-scheme: dark;
-  --background: #101a17;
+  --background: #111916;
   --foreground: #ecf4ef;
-  --panel: #17231e;
+  --panel: #1b2620;
   --primary: #37a782;
-  --border: #2c4037;
+  --border: #35463c;
   --muted: #a1b4aa;
   --subtle: #1d2b25;
 }
@@ -39,10 +39,10 @@ button, input, textarea, select { font: inherit; }
 button, select { cursor: pointer; }
 button:disabled { cursor: not-allowed; }
 ::selection { background: color-mix(in srgb, var(--primary) 28%, transparent); }
-.panel-card { border: 1px solid var(--border); border-radius: 1rem; background: var(--panel); }
-.control-input, .control-select { border: 1px solid var(--border); border-radius: .75rem; background: var(--panel); color: var(--foreground); padding: .65rem .8rem; outline: none; }
+.panel-card { border: 1px solid var(--border); border-radius: .65rem; background: var(--panel); }
+.control-input, .control-select { border: 1px solid var(--border); border-radius: .45rem; background: var(--panel); color: var(--foreground); padding: .65rem .8rem; outline: none; }
 .control-input:focus, .control-select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 20%, transparent); }
-.nav-link { display: block; border-radius: .75rem; padding: .65rem .8rem; color: var(--muted); font-size: .9rem; transition: background-color .15s ease, color .15s ease; }
+.nav-link { display: block; border-radius: .45rem; padding: .7rem .8rem; color: var(--muted); font-size: .9rem; transition: background-color .15s ease, color .15s ease; }
 .nav-link:hover { background: var(--subtle); color: var(--foreground); }
 .nav-link-active { background: color-mix(in srgb, var(--primary) 13%, var(--panel)); color: var(--primary); font-weight: 600; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
