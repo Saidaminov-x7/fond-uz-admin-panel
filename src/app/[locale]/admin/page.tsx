@@ -12,16 +12,15 @@ const resources = [
 
 export default async function Dashboard() {
   const t = await getTranslations();
-  return <section className="space-y-8">
-    <div className="flex flex-col gap-4 border-b border-border pb-7 sm:flex-row sm:items-end sm:justify-between">
-      <div><p className="text-xs font-bold uppercase tracking-[.16em] text-primary">FondUz · {t("dashboard.eyebrow")}</p><h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{t("dashboard.title")}</h1><p className="mt-2 max-w-xl text-sm leading-6 text-muted">{t("dashboard.description")}</p></div>
-      <span className="inline-flex w-fit items-center gap-2 rounded-md border border-border bg-panel px-3 py-2 text-xs font-semibold text-muted"><span className="size-2 rounded-full bg-emerald-600" />FondUz</span>
+  return <section className="space-y-8 sm:space-y-10">
+    <div className="grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+      <div><p className="text-[11px] font-bold uppercase tracking-[.18em] text-primary">FondUz <span aria-hidden="true">/</span> {t("dashboard.eyebrow")}</p><h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">{t("dashboard.title")}</h1><p className="mt-3 max-w-xl text-sm leading-6 text-muted">{t("dashboard.description")}</p></div>
+      <span className="inline-flex w-fit items-center gap-2 border-l-2 border-primary bg-sage px-3 py-2 text-xs font-semibold text-foreground"><span className="size-2 rounded-full bg-primary" />FondUz</span>
     </div>
     <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-      {resources.map((item, index) => <Link key={item.slug} href={`/admin/${item.slug}`} className="group panel-card p-5 transition-colors hover:border-primary/50 hover:bg-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-        <div className="flex items-center justify-between"><span className="text-xs font-bold tracking-[.12em] text-muted">{String(index + 1).padStart(2, "0")}</span><span aria-hidden="true" className="text-lg text-primary transition-transform group-hover:translate-x-1">→</span></div>
-        <h2 className="mt-8 font-semibold">{t(`navigation.${item.key}`)}</h2>
-        <p className="mt-2 text-sm text-muted">{t("dashboard.edit")}</p>
+      {resources.map((item, index) => <Link key={item.slug} href={`/admin/${item.slug}`} className="group panel-card flex min-h-44 flex-col justify-between p-5 transition-colors hover:border-primary hover:bg-subtle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:p-6">
+        <div className="flex items-center justify-between"><span className="text-[11px] font-bold tracking-[.14em] text-muted">{String(index + 1).padStart(2, "0")}</span><span aria-hidden="true" className="text-lg text-primary transition-transform group-hover:translate-x-1">→</span></div>
+        <div><h2 className="text-lg font-semibold tracking-tight">{t(`navigation.${item.key}`)}</h2><p className="mt-2 text-sm text-muted">{t("dashboard.edit")}</p></div>
       </Link>)}
     </div>
   </section>;

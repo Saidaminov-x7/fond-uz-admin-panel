@@ -10,14 +10,16 @@
   },
   "common": {
     "brand": "FondUz Admin",
+    "workspace": "Workspace",
     "menu": "Menu",
+    "closeMenu": "Close menu",
     "panel": "Admin panel",
     "logout": "Sign out",
     "loading": "Loading…",
-    "save": "Save",
+    "save": "Save changes",
     "cancel": "Cancel",
-    "search": "Search",
-    "add": "Add",
+    "search": "Search records",
+    "add": "Add record",
     "edit": "Edit",
     "delete": "Delete",
     "actions": "Actions",
@@ -35,15 +37,15 @@
     "system": "System"
   },
   "dashboard": {
-    "eyebrow": "FONDUZ CONTENT",
+    "eyebrow": "CONTENT MANAGEMENT",
     "title": "Admin panel",
-    "description": "Manage the content published on the website.",
+    "description": "Manage the information published on the FondUz website.",
     "open": "Open section",
-    "edit": "View and edit"
+    "edit": "View and edit records"
   },
   "login": {
     "title": "Sign in to the admin panel",
-    "email": "Email",
+    "email": "Email address",
     "password": "Password",
     "submit": "Sign in",
     "submitting": "Signing in…",
@@ -51,7 +53,7 @@
     "unavailable": "Could not connect to the server."
   },
   "fields": {
-    "slug": "Page slug",
+    "slug": "Page address",
     "title": "Title — Russian",
     "titleEn": "Title — English",
     "titleUz": "Title — Uzbek",
@@ -59,7 +61,7 @@
     "subtitleEn": "Summary — English",
     "subtitleUz": "Summary — Uzbek",
     "date": "Date",
-    "image": "Image",
+    "image": "Image URL",
     "content": "Text — Russian, one item per line",
     "contentEn": "Text — English, one item per line",
     "contentUz": "Text — Uzbek, one item per line",
@@ -84,15 +86,15 @@
     "price": "Price — Russian",
     "priceEn": "Price — English",
     "priceUz": "Price — Uzbek",
-    "includes": "Includes — Russian, one item per line",
-    "includesEn": "Includes — English, one item per line",
-    "includesUz": "Includes — Uzbek, one item per line",
+    "includes": "Included — Russian, one item per line",
+    "includesEn": "Included — English, one item per line",
+    "includesUz": "Included — Uzbek, one item per line",
     "nameUzService": "Care area — Uzbek",
     "description": "Description — Russian",
     "descriptionEn": "Description — English",
     "descriptionUz": "Description — Uzbek",
     "fundsCount": "Number of organizations",
-    "professionSlug": "Care area slug",
+    "professionSlug": "Care area address",
     "website": "Website"
   },
   "messages": {
